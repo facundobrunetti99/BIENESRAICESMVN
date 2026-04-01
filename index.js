@@ -1,11 +1,13 @@
 import express from "express";
 import usuariosroutes from "./routes/usuariosrouter.js";
 
+
 const app = express()
 
 const port=3000;
 
-app.get('/',usuariosroutes)
+app.get('/contacto',usuariosroutes)
+app.post('/usuarios',usuariosroutes)
 
 app.listen(port,()=>{
 
