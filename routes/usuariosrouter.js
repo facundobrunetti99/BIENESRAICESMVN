@@ -1,15 +1,8 @@
 import express from "express";
 const router= express.Router();
+import { formularioLogin } from "../controller/usuario.controller.js";
 
+router.get('/login',formularioLogin)
 
-router.get('/contacto',(req,res)=>{
-    res.send("Hola Estoy ejecutando el servidor aa")
-})
-
-
-router.post('/usuarios',(req,res)=>{
-    res.json({msg:'respuesta post'})
-}
-)
 export default router;
 

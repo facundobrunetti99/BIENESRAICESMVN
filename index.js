@@ -1,13 +1,12 @@
 import express from "express";
 import usuariosroutes from "./routes/usuariosrouter.js";
 
-
 const app = express()
-
 const port=3000;
-
-app.get('/contacto',usuariosroutes)
-app.post('/usuarios',usuariosroutes)
+//importar pug
+app.set('view engine','pug')
+app.set('views','./views')
+app.use('/auth',usuariosroutes)
 
 app.listen(port,()=>{
 
