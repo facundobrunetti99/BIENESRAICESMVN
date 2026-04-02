@@ -4,9 +4,14 @@ const formularioLogin= (req,res)=>{
     })
 }
 
-
+const formularioRegister=(req,res)=>{
+    res.render('auth/register',{
+        
+    })
+}
 
 
 export{
-    formularioLogin
+    formularioLogin,
+    formularioRegister
 }
